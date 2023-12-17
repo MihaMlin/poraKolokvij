@@ -33,5 +33,22 @@ Trenutno ima več kot 37 tisoč zvezdic (starred) in več kot 9,1 tisoč forkov 
 
 ## Vzdrževanje projekta  
 MPAndroidChart je aktivno vzdrževana knjižnica.  
-Do zdaj je bilo izdanih 44 različic, pri čemer je najnovejša različica 3.1.0, ki je izšla 20. marca 2019.  
+Do zdaj je bilo izdanih 44 različic, pri čemer je najnovejša različica [3.1.0](https://github.com/PhilJay/MPAndroidChart/releases/tag/v3.1.0), ki je izšla 20. marca 2019.  
 Do zdaj je k projektu prispevalu 69 različnih razvijalcev.
+
+# Primer Uporabe  
+**PIE CHART:** prikez prometnih nesreč za letne čase, po procentih.  
+![PieChart Example](https://github.com/MihaMlin/poraKolokvij/assets/99204980/c4c88180-5d30-4cfd-846b-6202f6609141)
+
+**LINE CHART:** prikaz raznih funkcij.  
+![LineChart Example](https://github.com/MihaMlin/poraKolokvij/assets/99204980/3c6eb8f1-0fb7-41b3-84f0-eb19a61418e9)
+
+**BAR CHART:** prikaz prometnih nesreč za letne čase, po številu.  
+![BarChart Example](https://github.com/MihaMlin/poraKolokvij/assets/99204980/683df1fe-278f-45fb-ab44-c0450b9cd19c)
+
+# Kako bi vključili v lasten projekt?  
+V našem projektu SafeRoute, delamo z podatki o prometnih nesrečah in zasedenostjo cest.  
+Te podatke bi s pomočjo MPAndroidChart, lahko prikazali na grafih.
+**Primeri:**  
+1. Prikaz števila nesreč ob letnih časih, vremenskih pogojih, ...
+2. Prikaz zasedenosti cest, ob določenih urah
