@@ -11,7 +11,7 @@
 ## Slabosti  
 1. **Učna krivulja:** Zaradi obsežnih funkcij lahko za začetnike predstavlja učno krivuljo.
 
-## License :page_facing_up:
+## Licenca :page_facing_up:
 
 Copyright 2020 Philipp Jahoda
 
@@ -28,6 +28,10 @@ See the License for the specific language governing permissions and
 limitations under the License.  
 
 ## Uporabniki  
-
+MPAndroidChart je izjemno priljubljena knjižnica med razvijalci Android aplikacij.  
+Trenutno ima več kot 37 tisoč zvezdic (starred) in več kot 9,1 tisoč forkov (forked) na [GitHubu](https://github.com/PhilJay/MPAndroidChart).  
 
 ## Vzdrževanje projekta  
+MPAndroidChart je aktivno vzdrževana knjižnica.  
+Do zdaj je bilo izdanih 44 različic, pri čemer je najnovejša različica 3.1.0, ki je izšla 20. marca 2019.  
+Do zdaj je k projektu prispevalu 69 različnih razvijalcev.
