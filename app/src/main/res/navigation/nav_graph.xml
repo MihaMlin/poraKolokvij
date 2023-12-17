@@ -15,4 +15,9 @@
         android:name="com.mihamlinaric.porakolokvij.LineChartFragment"
         android:label="Line Chart"
         tools:layout="@layout/fragment_line_chart" />
+    <fragment
+        android:id="@+id/barChartFragment"
+        android:name="com.mihamlinaric.porakolokvij.BarChartFragment"
+        android:label="fragment_bar_chart"
+        tools:layout="@layout/fragment_bar_chart" />
 </navigation>

@@ -2,10 +2,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/pieChartFragment"
-        android:title="PIE CHART"
-        android:icon="@drawable/ic_launcher_background" />
+        android:title="@string/pie_chart_icon"
+        android:icon="@drawable/pie_chart" />
     <item
         android:id="@+id/lineChartFragment"
-        android:title="LINE CHART"
-        android:icon="@drawable/ic_launcher_background" />
+        android:title="@string/line_chart_icon"
+        android:icon="@drawable/baseline_show_chart_24" />
+
+    <item
+        android:id="@+id/barChartFragment"
+        android:title="@string/bar_chart_icon"
+        android:icon="@drawable/baseline_bar_chart_24" />
 </menu>
