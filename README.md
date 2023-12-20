@@ -41,7 +41,7 @@ Do zdaj je k projektu prispevalu 69 različnih razvijalcev.
 ![PieChart Example](https://github.com/MihaMlin/poraKolokvij/assets/99204980/8d812d1f-0185-4c13-922c-9f747d8a7d18)
 
 **LINE CHART:** prikaz raznih funkcij.  
-![LineChart Example](https://github.com/MihaMlin/poraKolokvij/assets/99204980/3c6eb8f1-0fb7-41b3-84f0-eb19a61418e9)
+![LineChart Example](https://github.com/MihaMlin/poraKolokvij/assets/99204980/29628337-4c85-4231-b185-39a5ecd07283)
 
 **BAR CHART:** prikaz prometnih nesreč za letne čase, po številu.  
 ![BarChart Example](https://github.com/MihaMlin/poraKolokvij/assets/99204980/734a90ae-f8d6-42b4-84a4-02715d8b5412)
