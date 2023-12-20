@@ -5,11 +5,12 @@
 
 ## Prednosti  
 1.  **Vizualizacija Podatkov:** Podpira razne vrste grafov, zato je primerna za vizualizacijo različnih podatkov.  
-2.  **Prilagodljivost:** Izgled grafov lahko prilagodiš glede na izgled aplikacije.  
+2.  **Prilagodljivost:** Izgled grafov lahko prilagodiš glede na izgled aplikacije (barva, velikost, oblika).  
 3.  **Dokumentacija:** Dostop do [example projekta](https://github.com/PhilJay/MPAndroidChart/tree/master/MPChartExample) z jasnimi primer in dobra [dokumentacija](https://weeklycoding.com/mpandroidchart-documentation/).  
 
 ## Slabosti  
-1. **Učna krivulja:** Zaradi obsežnih funkcij lahko za začetnike predstavlja učno krivuljo.
+1. **Kompleksnost prilagodljivosti:** Doseči bolj specifične prilagoditve, je bolj zahtevno, potrebno je globje znanje knjižnice.
+2. **Omejene podpora animacij:** Čeprav podpira animacije, so možnosti precej omejene.
 
 ## Licenca :page_facing_up:
 
