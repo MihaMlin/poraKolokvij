@@ -38,7 +38,7 @@ Do zdaj je k projektu prispevalu 69 različnih razvijalcev.
 
 # Primer Uporabe  
 **PIE CHART:** prikez prometnih nesreč za letne čase, po procentih.  
-![PieChart Example](https://github.com/MihaMlin/poraKolokvij/assets/99204980/c4c88180-5d30-4cfd-846b-6202f6609141)
+![PieChart Example](https://github.com/MihaMlin/poraKolokvij/assets/99204980/9b86a4d0-7ef5-4392-a966-2f2ec448d51d)
 
 **LINE CHART:** prikaz raznih funkcij.  
 ![LineChart Example](https://github.com/MihaMlin/poraKolokvij/assets/99204980/3c6eb8f1-0fb7-41b3-84f0-eb19a61418e9)
