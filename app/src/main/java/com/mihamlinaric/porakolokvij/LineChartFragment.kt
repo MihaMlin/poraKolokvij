@@ -7,10 +7,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.github.mikephil.charting.components.XAxis
+import com.github.mikephil.charting.components.YAxis
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
+import com.github.mikephil.charting.formatter.IndexAxisValueFormatter
 import com.mihamlinaric.porakolokvij.databinding.FragmentLineChartBinding
+import kotlin.math.cos
 import kotlin.math.sin
 
 class LineChartFragment : Fragment() {
@@ -32,33 +35,63 @@ class LineChartFragment : Fragment() {
         // get lineChart
         val lineChart = binding.lineChart
 
-        // setup chart entries
-        val entries = ArrayList<Entry>()
-        for (i in 0..720) {
-            val x = i.toFloat()
-            val y = sin(Math.toRadians(i.toDouble())).toFloat()
-            entries.add(Entry(x, y))
-        }
+        // add style to LineChart
+        val legend = lineChart.legend
+        legend.isEnabled = true
+        legend.textSize = 16f
 
-        // create LineDataSet with entries
-        val dataSet = LineDataSet(entries, "Sin Wave")
-        dataSet.color = Color.BLUE
+        val description = lineChart.description
+        description.isEnabled = false
 
-        // create and set LineData
-        val lineData = LineData(dataSet)
-        lineChart.data = lineData
 
-        // style LineChart
-        lineChart.description.isEnabled = false
         lineChart.axisRight.isEnabled = false
 
         val xAxis = lineChart.xAxis
         xAxis.position = XAxis.XAxisPosition.BOTTOM
+        xAxis.setDrawGridLines(true)
+        xAxis.gridLineWidth = 1f
+        xAxis.granularity = 180f
 
-        val yAxis = lineChart.axisLeft
-        yAxis.axisMaximum = 1f
-        yAxis.axisMinimum = -1f
+        val leftAxis = lineChart.axisLeft
+        leftAxis.setPosition(YAxis.YAxisLabelPosition.OUTSIDE_CHART)
+        leftAxis.setDrawGridLines(true)
+        leftAxis.gridLineWidth = 1.5f
+        leftAxis.axisMaximum = 1.5f
+        leftAxis.axisMinimum = -1.5f
+        leftAxis.labelCount = 3
+        leftAxis.granularity = 1f
 
+        // create LineDataSet for sine wave
+        val entriesSine = ArrayList<Entry>()
+        for (i in 0..720) {
+            val x = i.toFloat()
+            val y = sin(Math.toRadians(i.toDouble())).toFloat()
+            entriesSine.add(Entry(x, y))
+        }
+
+        // setup chart entries for cosine wave
+        val entriesCosine = ArrayList<Entry>()
+        for (i in 0..720) {
+            val x = i.toFloat()
+            val y = cos(Math.toRadians(i.toDouble())).toFloat()
+            entriesCosine.add(Entry(x, y))
+        }
+
+        // create LineDataSet for sine wave
+        val dataSetSine = LineDataSet(entriesSine, "Sine Wave")
+        dataSetSine.color = Color.RED
+        dataSetSine.setDrawCircles(false)
+        dataSetSine.lineWidth = 3f
+
+        // create LineDataSet for cosine wave
+        val dataSetCosine = LineDataSet(entriesCosine, "Cosine Wave")
+        dataSetCosine.color = Color.BLUE
+        dataSetCosine.setDrawCircles(false)
+        dataSetCosine.lineWidth = 3f
+
+        // create and set LineData
+        val lineData = LineData(dataSetSine, dataSetCosine)
+        lineChart.data = lineData
 
         // refresh and apply changes
         lineChart.invalidate()
