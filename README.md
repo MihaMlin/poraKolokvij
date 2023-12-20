@@ -2,6 +2,9 @@
 ===============
 
 # Zakaj MPAndroidChart?
+MPAndroidChart je knjižnica za risanje grafov v Android aplikacijah.  
+Razvita je za enostavno vključevanje vizualnih elementov, kot so linije, stolpci in krogi.  
+S svojo podporo za interaktivnost omogoča uporabnikom dotikanje, približevanje in pomikanje grafov za boljše raziskovanje podatkov.
 
 ## Prednosti  
 1.  **Vizualizacija Podatkov:** Podpira razne vrste grafov, zato je primerna za vizualizacijo različnih podatkov.  
