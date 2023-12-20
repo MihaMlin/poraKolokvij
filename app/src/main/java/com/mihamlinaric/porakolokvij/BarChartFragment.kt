@@ -17,17 +17,21 @@ import com.mihamlinaric.porakolokvij.databinding.FragmentBarChartBinding
 class BarChartFragment : Fragment() {
 
     private var _binding: FragmentBarChartBinding? = null
-    private val binding get() = _binding
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentBarChartBinding.inflate(inflater, container, false)
+        return binding.root
+    }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
         // get barChart
-        val barChart = _binding!!.barChart
+        val barChart = binding.barChart
 
         // setup chart entries
         val entries = ArrayList<BarEntry>()
@@ -62,10 +66,9 @@ class BarChartFragment : Fragment() {
 
         // refresh and apply changes
         barChart.invalidate()
-
-
-        return binding!!.root
     }
+
+
 
     override fun onDestroyView() {
         super.onDestroyView()

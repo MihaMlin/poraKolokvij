@@ -16,17 +16,21 @@ import kotlin.math.sin
 class LineChartFragment : Fragment() {
 
     private var _binding: FragmentLineChartBinding? = null
-    private val binding get() = _binding
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentLineChartBinding.inflate(inflater, container, false)
+        return binding.root
+    }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
         // get lineChart
-        val lineChart = _binding!!.lineChart
+        val lineChart = binding.lineChart
 
         // setup chart entries
         val entries = ArrayList<Entry>()
@@ -58,19 +62,6 @@ class LineChartFragment : Fragment() {
 
         // refresh and apply changes
         lineChart.invalidate()
-
-
-        return binding!!.root
-
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        /*
-        binding.buttonFirst.setOnClickListener {
-            Timber.d(“Do some action here”);
-        }
-        */
     }
 
     override fun onDestroyView() {
