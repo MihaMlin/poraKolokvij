@@ -70,6 +70,8 @@ class PieChartFragment : Fragment() {
         // style PieDataSet
         pieDataSet.colors = ColorTemplate.MATERIAL_COLORS.asList()
         pieDataSet.setDrawValues(false)
+        pieDataSet.sliceSpace = 2f
+        pieDataSet.selectionShift = 5f
 
         // set data of chart
         pieChart.data = PieData(pieDataSet)

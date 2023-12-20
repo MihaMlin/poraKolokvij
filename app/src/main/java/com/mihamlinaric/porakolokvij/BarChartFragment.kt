@@ -1,11 +1,14 @@
 package com.mihamlinaric.porakolokvij
 
+import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.github.mikephil.charting.components.Legend
 import com.github.mikephil.charting.components.XAxis
+import com.github.mikephil.charting.components.YAxis
 import com.github.mikephil.charting.data.BarData
 import com.github.mikephil.charting.data.BarDataSet
 import com.github.mikephil.charting.data.BarEntry
@@ -33,6 +36,36 @@ class BarChartFragment : Fragment() {
         // get barChart
         val barChart = binding.barChart
 
+        // add style to barChart
+        barChart.setMaxVisibleValueCount(5) // if more then 10 entries are displayed, no values will be drawn
+        barChart.setDrawBarShadow(false)
+        barChart.setDrawValueAboveBar(true)
+
+        val xAxis = barChart.xAxis
+        xAxis.position = XAxis.XAxisPosition.BOTTOM
+        xAxis.textSize = 12f
+        xAxis.setDrawGridLines(false)
+        xAxis.valueFormatter = IndexAxisValueFormatter(listOf("Summer", "Spring", "Fall", "Winter"))
+        xAxis.granularity = 1f // controls interval between axis values
+
+        val leftAxis = barChart.axisLeft
+        leftAxis.setPosition(YAxis.YAxisLabelPosition.OUTSIDE_CHART)
+        leftAxis.textSize = 10f
+        leftAxis.setDrawGridLines(false)
+        leftAxis.axisMinimum = 0f
+        leftAxis.axisMaximum = 2200f
+        leftAxis.labelCount = 5
+
+        val rightAxis = barChart.axisRight
+        rightAxis.isEnabled = false
+
+        val legend = barChart.legend
+        legend.isEnabled = true
+        legend.orientation = Legend.LegendOrientation.HORIZONTAL
+
+        val description = barChart.description
+        description.isEnabled = false
+
         // setup chart entries
         val entries = ArrayList<BarEntry>()
         entries.add(BarEntry(0f, 1100f))  // Summer
@@ -48,20 +81,6 @@ class BarChartFragment : Fragment() {
         // create and set BarData
         val barData = BarData(barDataSet)
         barChart.data = barData
-
-        // customize the appearance of the chart
-        barChart.legend.isEnabled = true
-        barChart.description.isEnabled = false
-        barChart.axisRight.isEnabled = false
-
-        val yAxis = barChart.axisLeft
-        yAxis.axisMinimum = 0f
-        yAxis.axisMaximum = 2200f
-
-        val xAxis = barChart.xAxis
-        xAxis.position = XAxis.XAxisPosition.BOTTOM
-        xAxis.valueFormatter = IndexAxisValueFormatter(listOf("Summer", "Spring", "Fall", "Winter"))
-        xAxis.granularity = 1f
 
 
         // refresh and apply changes
