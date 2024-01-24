@@ -1,5 +1,7 @@
 ![MPAndroidChart icon](https://github.com/MihaMlin/poraKolokvij/assets/99204980/bc45eb3e-56a9-4647-8a3e-05b58e5a0332)  
 ===============
+## Uporaba MPAndroidChart v projektu
+[Projekt StatisticsFragment](https://github.com/feri-segmentation-fault/saferoute-android/blob/main/app/src/main/java/com/segmentationfault/saferoute/fragment/StatisticsFragment.kt)
 
 # Zakaj MPAndroidChart?
 MPAndroidChart je knjižnica za risanje grafov v Android aplikacijah.  
